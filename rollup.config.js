@@ -11,7 +11,7 @@ const entry = "src/index.js";
 const outputFolder = "dist";
 
 export default [
-  // Vanilla JS — bundle completo con CSS injected
+  // Vanilla JS — complete bundle with CSS injected
   {
     input: entry,
     output: {
@@ -27,7 +27,7 @@ export default [
     ],
   },
 
-  // Framework (React/Vue/Svelte) — ESM + CSS estratto separatamente
+  // Framework (React/Vue/Svelte) — ESM + CSS extracted separately
   {
     input: entry,
     output: {
@@ -37,13 +37,13 @@ export default [
     plugins: [
       resolve(),
       postcss({
-        extract: path.resolve(`${outputFolder}/ova.css`), // ← CSS come file separato
+        extract: path.resolve(`${outputFolder}/ova.css`),
         minimize: true,
       }),
       terser(terserConfig),
     ],
   },
-  // Framework — Bundle ESM + CSS auto-iniettato
+  // Framework — Bundle ESM + CSS auto-injected
   {
     input: entry,
     output: {
