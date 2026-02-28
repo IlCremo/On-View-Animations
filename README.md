@@ -24,7 +24,7 @@ Full documentation is available at **[this link](https://on-view-animations.verc
 
 ## Download
 
-Download the latest release from the [Releases page](https://github.com/TUO-USERNAME/TUO-REPO/releases/latest).
+Download the latest release from the [Releases page](https://github.com/IlCremo/On-View-Animations/releases/latest).
 
 | File                     | Format | CSS           | Use case                          |
 | ------------------------ | ------ | ------------- | --------------------------------- |
