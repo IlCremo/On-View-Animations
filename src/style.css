@@ -1,0 +1,173 @@
+/*
+ * ============================================================================================
+ *                                            INFO
+ * ============================================================================================
+ *
+ *                                  ██████  ██    ██  █████
+ *                                 ██    ██ ██    ██ ██   ██
+ *                                 ██    ██ ██    ██ ███████
+ *                                 ██    ██  ██  ██  ██   ██
+ *                                  ██████    ████   ██   ██
+ *
+ *                                    (On View Animations)
+ *
+ * ■ Author: Andrea Cremonesi
+ * ■ Version: 1.0
+ * ■ Description: This file contains all the necessary CSS classes to animate the components 
+ *                and all the basic animations present in the OVA library.
+ *
+ * ============================================================================================
+ *                                            LICENSE
+ * ============================================================================================
+ *
+ * ■ License: MIT License
+ *
+ * Copyright (c) 2026 Andrea Cremonesi
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ *
+ * ============================================================================================
+ * ============================================================================================
+ */
+
+.OVA-animation {
+  visibility: hidden;
+  animation: none;
+}
+
+.OVA-animation.in-view-OVA {
+  animation-name: var(--OVA-animation);
+  animation-duration: var(--OVA-duration);
+  animation-timing-function: var(--OVA-easing);
+  animation-delay: var(--OVA-delay);
+  animation-fill-mode: forwards;
+}
+
+/* 
+ * ============================================================================================
+ *                                     FADE ANIMATIONS
+ * ============================================================================================
+ */
+
+@keyframes fade-in-OVA {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes fade-top-OVA {
+  from {
+    opacity: 0;
+    transform: translateY(calc(var(--OVA-offset) * -1));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes fade-right-OVA {
+  from {
+    opacity: 0;
+    transform: translateX(var(--OVA-offset));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+@keyframes fade-bottom-OVA {
+  from {
+    opacity: 0;
+    transform: translateY(var(--OVA-offset));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes fade-left-OVA {
+  from {
+    opacity: 0;
+    transform: translateX(calc(var(--OVA-offset) * -1));
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+/* 
+ * ============================================================================================
+ *                                     SLIDE ANIMATIONS
+ * ============================================================================================
+ */
+
+@keyframes slide-top-OVA {
+  from {
+    opacity: 0;
+    transform: translateY(calc(var(--OVA-offset) * -1));
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes slide-right-OVA {
+  from {
+    transform: translateX(var(--OVA-offset));
+  }
+  to {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}
+
+@keyframes slide-bottom-OVA {
+  from {
+    opacity: 0;
+    transform: translateY(var(--OVA-offset));
+  }
+  to {
+    transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes slide-left-OVA {
+  from {
+    transform: translateX(calc(var(--OVA-offset) * -1));
+  }
+  to {
+    transform: translateX(0);
+    visibility: visible;
+  }
+}

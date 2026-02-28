@@ -1,0 +1,62 @@
+---
+id: vanilla-js
+title: Vanilla JS
+sidebar_position: 1
+---
+
+# Vanilla JS
+
+This is the simplest way to use OVA. Download a single file, include it in your HTML, and you're done — no build tools or configuration required.
+
+## Download
+
+Download **`ova.bundle.min.js`** — includes both JavaScript and CSS in a single file.
+
+<a
+  className="ova-download-btn"
+  href="https://github.com/TUO-USERNAME/TUO-REPO/releases/latest/download/ova.bundle.min.js"
+  download
+>
+  <span>Download ova.bundle.min.js</span>
+</a>
+
+## Usage
+
+Add the script tag to your HTML file with the `data-auto-init` attribute. OVA will initialize itself automatically when the DOM is ready — no JavaScript required on your end.
+
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Page</title>
+  </head>
+  <body>
+    <div data-ova="">
+      <h1>Hello World</h1>
+    </div>
+
+    <!-- Load OVA at the end of the body -->
+    <script src="ova.bundle.min.js" data-auto-init></script>
+  </body>
+</html>
+```
+
+:::tip
+
+Place the `<script>` tag at the end of `<body>` to ensure the DOM is fully loaded before OVA runs.
+
+:::
+
+## **Manual initialization**
+
+If you need more control over when OVA initializes — for example, after dynamically injecting content into the DOM — you can omit `data-auto-init` and call `initOVA()` manually:
+
+```html
+<script src="ova.bundle.min.js"></script>
+<script>
+  // Initialize OVA manually whenever you're ready
+  window.initOVA();
+</script>
+```

@@ -1,0 +1,44 @@
+---
+id: intro
+title: Introduction
+sidebar_position: 1
+slug: /
+---
+
+<div style={{ textAlign: "center", marginBottom: "2rem" }}>
+  <img
+    src="/img/logo_full_dark.svg"
+    alt="OVA Logo"
+    style={{ maxWidth: "300px" }}
+  />
+</div>
+
+# OVA — On View Animations
+
+**OVA** is a lightweight JavaScript library that animates HTML elements as they enter the viewport. It requires no dependencies and is built on the native [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
+
+## How it works
+
+Add a `data-ova` attribute to any HTML element. When that element scrolls into view, OVA automatically triggers its animation. No JavaScript configuration required — everything is controlled via HTML attributes.
+
+```html
+<div data-ova="animation: fade-top; duration: 800ms; delay: 200ms">
+  <h1>Hello World</h1>
+</div>
+```
+
+## **Features**
+
+- 🪶 **Lightweight** — one JS file and one CSS file, no dependencies
+- ⚡ **Performant** — uses `IntersectionObserver` and stops observing after the animation fires
+- 🎨 **Customizable** — control animation, duration, easing, delay and offset per element
+- 🔌 **Flexible** — available as Vanilla JS bundle, ESM with bundled CSS, or ESM with separate CSS
+- ✏️ **Extensible** — add your own custom animations with plain CSS
+
+## **Browser support**
+
+OVA relies on the `IntersectionObserver` API, which is supported by all modern browsers. Internet Explorer is not supported.
+
+## **License**
+
+OVA is released under the [**MIT License**](https://github.com/TUO-USERNAME/TUO-REPO/blob/main/LICENSE).

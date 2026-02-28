@@ -1,0 +1,103 @@
+---
+id: esm-bundle
+title: ESM with Bundle
+sidebar_position: 2
+---
+
+# ESM with Bundle
+
+This option is intended for use with modern frameworks like **React**, **Vue** or **Svelte**. The CSS is automatically injected into the page at runtime, so you only need to import a single file.
+
+## Download
+
+Download **`ova.bundle.esm.js`** — includes both JavaScript and CSS in a single file.
+
+<a
+  className="ova-download-btn"
+  href="https://github.com/TUO-USERNAME/TUO-REPO/releases/latest/download/ova.bundle.esm.js"
+  download
+>
+  <span>Download ova.bundle.esm.js</span>
+</a>
+
+## Usage
+
+Import `initOVA` and call it once the DOM is ready.
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+  <TabItem value="react" label="React">
+
+```js
+import { initOVA } from "./ova.bundle.esm.js";
+import { useEffect } from "react";
+
+export default function App() {
+  useEffect(() => {
+    initOVA();
+  }, []);
+
+  return (
+    <div data-ova="animation: fade-top; duration: 800ms">
+      <h1>Hello World</h1>
+    </div>
+  );
+}
+```
+
+  </TabItem>
+  <TabItem value="vue" label="Vue">
+
+```js
+<script setup>
+import { initOVA } from './ova.bundle.esm.js';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  initOVA();
+});
+</script>
+
+<template>
+  <div data-ova="animation: fade-top; duration: 800ms">
+    <h1>Hello World</h1>
+  </div>
+</template>
+```
+
+  </TabItem>
+  <TabItem value="svelte" label="Svelte">
+
+```js
+<script>
+  import { initOVA } from './ova.bundle.esm.js';
+  import { onMount } from 'svelte';
+
+  onMount(() => {
+    initOVA();
+  });
+</script>
+
+<div data-ova="animation: fade-top; duration: 800ms">
+  <h1>Hello World</h1>
+</div>
+```
+
+  </TabItem>
+  <TabItem value="vanilla" label="Vanilla ESM">
+
+```html
+<script type="module">
+  import { initOVA } from "./ova.bundle.esm.js";
+  initOVA();
+</script>
+```
+
+  </TabItem>
+</Tabs>
+
+:::info
+The CSS is bundled inside the JS file and injected automatically into the `<head>` at runtime. You do not need to import any separate CSS file.
+:::

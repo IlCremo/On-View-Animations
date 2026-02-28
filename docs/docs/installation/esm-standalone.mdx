@@ -1,0 +1,120 @@
+---
+id: esm-standalone
+title: ESM Standalone
+sidebar_position: 3
+---
+
+# ESM Standalone
+
+This option gives you full control over the CSS. The styles are provided as a separate file, so you can import or load them however you prefer — useful when you want to manage all your stylesheets in one place or customize the CSS directly.
+
+## Download
+
+Download both files from the OVA GitHub repository.
+
+<div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+  <a
+    className="ova-download-btn"
+    href="https://github.com/TUO-USERNAME/TUO-REPO/releases/latest/download/ova.esm.js"
+    download
+  >
+    <span>Download ova.esm.js</span>
+  </a>
+  <a
+    className="ova-download-btn ova-download-btn-primary"
+    href="https://github.com/TUO-USERNAME/TUO-REPO/releases/latest/download/ova.css"
+    download
+  >
+    <span>Download ova.css</span>
+  </a>
+</div>
+
+## Usage
+
+Import both files in your project. The CSS must be loaded separately.
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+  <TabItem value="react" label="React">
+
+```js
+import { initOVA } from "./ova.esm.js";
+import "./ova.css";
+import { useEffect } from "react";
+
+export default function App() {
+  useEffect(() => {
+    initOVA();
+  }, []);
+
+  return (
+    <div data-ova="animation: fade-top; duration: 800ms">
+      <h1>Hello World</h1>
+    </div>
+  );
+}
+```
+
+  </TabItem>
+  <TabItem value="vue" label="Vue">
+
+```js
+<script setup>
+import { initOVA } from './ova.esm.js';
+import './ova.css';
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  initOVA();
+});
+</script>
+
+<template>
+  <div data-ova="animation: fade-top; duration: 800ms">
+    <h1>Hello World</h1>
+  </div>
+</template>
+```
+
+  </TabItem>
+  <TabItem value="svelte" label="Svelte">
+
+```js
+<script>
+  import { initOVA } from './ova.esm.js';
+  import './ova.css';
+  import { onMount } from 'svelte';
+
+  onMount(() => {
+    initOVA();
+  });
+</script>
+
+<div data-ova="animation: fade-top; duration: 800ms">
+  <h1>Hello World</h1>
+</div>
+```
+
+  </TabItem>
+  <TabItem value="vanilla" label="Vanilla ESM">
+
+```html
+<head>
+  <link rel="stylesheet" href="ova.css" />
+</head>
+<body>
+  <script type="module">
+    import { initOVA } from "./ova.esm.js";
+    initOVA();
+  </script>
+</body>
+```
+
+  </TabItem>
+</Tabs>
+
+:::tip
+Use this option if you want to customize or extend the OVA animations by editing `ova.css` directly, or if you manage all your styles through a single CSS pipeline.
+:::
