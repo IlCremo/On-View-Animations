@@ -8,11 +8,9 @@ const config = {
     "On View Animations — Lightweight scroll-triggered animation library",
   favicon: "img/favicon.ico",
 
-  // Cambia con il tuo URL di deploy definitivo (es. GitHub Pages)
-  url: "https://your-site-url.com",
+  url: "https://on-view-animations.vercel.app",
   baseUrl: "/",
 
-  // Gestione link rotti: "warn" in sviluppo è meno invasivo
   onBrokenLinks: "warn",
 
   markdown: {
@@ -33,9 +31,9 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
-          routeBasePath: "/", // La docs diventa la homepage
+          routeBasePath: "/",
         },
-        blog: false, // Blog disabilitato, non ci serve
+        blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -50,7 +48,7 @@ const config = {
         logo: {
           alt: "OVA Logo",
           src: "img/logo_full.svg",
-          srcDark: "img/logo_full_dark.svg", // puoi mettere una versione dark se ce l'hai
+          srcDark: "img/logo_full_dark.svg",
         },
         items: [
           {
