@@ -11,6 +11,8 @@ jobs:
   release:
     name: Create Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout
@@ -20,6 +22,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          registry-url: "https://registry.npmjs.org"
 
       - name: Install dependencies
         run: npm install
@@ -52,3 +55,9 @@ jobs:
             dist/ova.bundle.esm.js
             dist/ova.esm.js
             dist/ova.css
+
+      - name: Publish to npm
+        if: steps.tag_check.outputs.EXISTS == 'false'
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
