@@ -12,7 +12,7 @@
 
 ## Documentation
 
-Full documentation is available at **[your-docs-url.com](https://your-docs-url.com)**.
+Full documentation is available at **[this link](https://on-view-animations.vercel.app)**.
 
 ## Features
 
