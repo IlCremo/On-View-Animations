@@ -1,4 +1,40 @@
 {
+  "name": "on-view-animations",
+  "version": "1.0.0",
+  "description": "A lightweight JavaScript library for scroll-triggered animations using HTML data attributes and the native IntersectionObserver API.",
+  "author": "Andrea Cremonesi",
+  "license": "MIT",
+  "main": "dist/ova.bundle.min.js",
+  "module": "dist/ova.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ova.bundle.esm.js",
+      "require": "./dist/ova.bundle.min.js"
+    },
+    "./css": "./dist/ova.css"
+  },
+  "files": [
+    "dist/"
+  ],
+  "keywords": [
+    "animation",
+    "scroll-animation",
+    "intersection-observer",
+    "css-animation",
+    "lightweight",
+    "vanilla-js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IlCremo/On-View-Animations.git"
+  },
+  "homepage": "https://on-view-animations.vercel.app/",
+  "bugs": {
+    "url": "https://github.com/IlCremo/On-View-Animations/issues"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^0.4.4",
