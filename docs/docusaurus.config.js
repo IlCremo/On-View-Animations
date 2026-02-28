@@ -58,7 +58,7 @@ const config = {
             label: "Documentation",
           },
           {
-            href: "https://github.com/TUO-USERNAME/TUO-REPO",
+            href: "https://github.com/IlCremo/On-View-Animations",
             label: "GitHub",
             position: "right",
           },
