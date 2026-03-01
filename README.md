@@ -24,6 +24,16 @@ Full documentation is available at **[this link](https://on-view-animations.verc
 
 ## Download
 
+### npm
+
+Available on [**npm**](https://www.npmjs.com/package/on-view-animations):
+
+```bash
+npm install on-view-animations
+```
+
+### GitHub Releases
+
 Download the latest release from the [Releases page](https://github.com/IlCremo/On-View-Animations/releases/latest).
 
 | File                     | Format | CSS           | Use case                          |
