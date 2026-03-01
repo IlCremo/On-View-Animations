@@ -1,6 +1,6 @@
 {
   "name": "on-view-animations",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A lightweight JavaScript library for scroll-triggered animations using HTML data attributes and the native IntersectionObserver API.",
   "author": "Andrea Cremonesi",
   "license": "MIT",
