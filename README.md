@@ -55,7 +55,7 @@ Download the latest release from the [Releases page](https://github.com/IlCremo/
 ### ESM
 
 ```js
-import { initOVA } from "./ova.bundle.esm.js";
+import { initOVA } from "on-view-animations/dist/ova.bundle.esm.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initOVA();
