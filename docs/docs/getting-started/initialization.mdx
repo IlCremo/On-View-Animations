@@ -23,7 +23,7 @@ OVA will listen for the `DOMContentLoaded` event and initialize itself automatic
 For all other use cases, import `initOVA` and call it once the DOM is ready.
 
 ```js
-import { initOVA } from "./ova.bundle.esm.js";
+import { initOVA } from "on-view-animations/dist/ova.bundle.esm.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initOVA();
@@ -39,7 +39,10 @@ If you are using a framework like React, Vue or Svelte, use the appropriate life
 OVA comes with a set of default animation settings that are applied to all elements unless overridden via the `data-ova` attribute. You can change these defaults globally by modifying the `OVA_DEFAULT_SETTINGS` object **before** calling `initOVA()`.
 
 ```js
-import { initOVA, OVA_DEFAULT_SETTINGS } from "./ova.bundle.esm.js";
+import {
+  initOVA,
+  OVA_DEFAULT_SETTINGS,
+} from "on-view-animations/dist/ova.bundle.esm.js";
 
 OVA_DEFAULT_SETTINGS.animation = "fade-bottom";
 OVA_DEFAULT_SETTINGS.duration = "600ms";
@@ -49,6 +52,10 @@ OVA_DEFAULT_SETTINGS.offset = "50px";
 
 initOVA();
 ```
+
+:::tip Direct Download
+If you installed via direct download, replace the import path with `'./path/to/ova.bundle.esm.js'`.
+:::
 
 The available properties are:
 
@@ -65,7 +72,10 @@ The available properties are:
 You can also configure the `IntersectionObserver` by modifying `OVA_OBSERVER_OPTIONS` before calling `initOVA()`.
 
 ```js
-import { initOVA, OVA_OBSERVER_OPTIONS } from "./ova.bundle.esm.js";
+import {
+  initOVA,
+  OVA_OBSERVER_OPTIONS,
+} from "on-view-animations/dist/ova.bundle.esm.js";
 
 OVA_OBSERVER_OPTIONS.rootMargin = "0px 0px -100px 0px";
 OVA_OBSERVER_OPTIONS.threshold = 0.2;
@@ -77,3 +87,7 @@ initOVA();
 | ------------ | ------- | --------------------------------------------------------------------- |
 | `rootMargin` | `0px`   | Margin around the viewport used to trigger the observer               |
 | `threshold`  | `0`     | Fraction of the element that must be visible to trigger the animation |
+
+```
+
+```

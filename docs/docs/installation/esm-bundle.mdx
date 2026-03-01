@@ -8,7 +8,20 @@ sidebar_position: 2
 
 This option is intended for use with modern frameworks like **React**, **Vue** or **Svelte**. The CSS is automatically injected into the page at runtime, so you only need to import a single file.
 
-## Download
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+## Installation
+
+<Tabs>
+  <TabItem value="npm" label="npm">
+
+```bash
+npm install on-view-animations
+```
+
+  </TabItem>
+  <TabItem value="download" label="Direct Download">
 
 Download **`ova.bundle.esm.js`** — includes both JavaScript and CSS in a single file.
 
@@ -20,18 +33,18 @@ Download **`ova.bundle.esm.js`** — includes both JavaScript and CSS in a singl
   <span>Download ova.bundle.esm.js</span>
 </a>
 
+  </TabItem>
+</Tabs>
+
 ## Usage
 
 Import `initOVA` and call it once the DOM is ready.
-
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
 
 <Tabs>
   <TabItem value="react" label="React">
 
 ```js
-import { initOVA } from "./ova.bundle.esm.js";
+import { initOVA } from "on-view-animations";
 import { useEffect } from "react";
 
 export default function App() {
@@ -52,7 +65,7 @@ export default function App() {
 
 ```js
 <script setup>
-import { initOVA } from './ova.bundle.esm.js';
+import { initOVA } from 'on-view-animations';
 import { onMounted } from 'vue';
 
 onMounted(() => {
@@ -72,7 +85,7 @@ onMounted(() => {
 
 ```js
 <script>
-  import { initOVA } from './ova.bundle.esm.js';
+  import { initOVA } from 'on-view-animations';
   import { onMount } from 'svelte';
 
   onMount(() => {
@@ -90,7 +103,7 @@ onMounted(() => {
 
 ```html
 <script type="module">
-  import { initOVA } from "./ova.bundle.esm.js";
+  import { initOVA } from "on-view-animations";
   initOVA();
 </script>
 ```
@@ -98,6 +111,17 @@ onMounted(() => {
   </TabItem>
 </Tabs>
 
-:::info
-The CSS is bundled inside the JS file and injected automatically into the `<head>` at runtime. You do not need to import any separate CSS file.
+:::tip Direct Download
+If you installed via direct download, replace the import path with `'./path/to/ova.bundle.esm.js'`.
 :::
+:::info CSS auto-injected
+With this bundle you **do not** need to import any CSS file separately — it is automatically injected at runtime.
+:::
+
+## HTML
+
+Add the `data-ova` attribute to any element you want to animate:
+
+```html
+<div data-ova>Animated element</div>
+```

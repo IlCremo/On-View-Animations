@@ -8,7 +8,27 @@ sidebar_position: 3
 
 This option gives you full control over the CSS. The styles are provided as a separate file, so you can import or load them however you prefer — useful when you want to manage all your stylesheets in one place or customize the CSS directly.
 
-## Download
+## Installation
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+<Tabs>
+  <TabItem value="npm" label="npm">
+
+```bash
+npm install on-view-animations
+```
+
+Then import both the JS and the CSS from the package:
+
+```js
+import { initOVA } from "on-view-animations/dist/ova.esm.js";
+import "on-view-animations/dist/ova.css";
+```
+
+  </TabItem>
+  <TabItem value="download" label="Direct Download">
 
 Download both files from the OVA GitHub repository.
 
@@ -21,7 +41,7 @@ Download both files from the OVA GitHub repository.
     <span>Download ova.esm.js</span>
   </a>
   <a
-    className="ova-download-btn ova-download-btn-primary"
+    className="ova-download-btn ova-download-btn-secondary"
     href="https://github.com/IlCremo/On-View-Animations/releases/latest/download/ova.css"
     download
   >
@@ -29,19 +49,19 @@ Download both files from the OVA GitHub repository.
   </a>
 </div>
 
+  </TabItem>
+</Tabs>
+
 ## Usage
 
 Import both files in your project. The CSS must be loaded separately.
-
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
 
 <Tabs>
   <TabItem value="react" label="React">
 
 ```js
-import { initOVA } from "./ova.esm.js";
-import "./ova.css";
+import { initOVA } from "on-view-animations/dist/ova.esm.js";
+import "on-view-animations/dist/ova.css";
 import { useEffect } from "react";
 
 export default function App() {
@@ -62,8 +82,8 @@ export default function App() {
 
 ```js
 <script setup>
-import { initOVA } from './ova.esm.js';
-import './ova.css';
+import { initOVA } from 'on-view-animations/dist/ova.esm.js';
+import 'on-view-animations/dist/ova.css';
 import { onMounted } from 'vue';
 
 onMounted(() => {
@@ -83,8 +103,8 @@ onMounted(() => {
 
 ```js
 <script>
-  import { initOVA } from './ova.esm.js';
-  import './ova.css';
+  import { initOVA } from 'on-view-animations/dist/ova.esm.js';
+  import 'on-view-animations/dist/ova.css';
   import { onMount } from 'svelte';
 
   onMount(() => {
@@ -114,6 +134,10 @@ onMounted(() => {
 
   </TabItem>
 </Tabs>
+
+:::tip Direct Download
+If you installed via direct download, replace the import paths with `'./path/to/ova.esm.js'` and `'./path/to/ova.css'`.
+:::
 
 :::tip
 Use this option if you want to customize or extend the OVA animations by editing `ova.css` directly, or if you manage all your styles through a single CSS pipeline.

@@ -18,12 +18,16 @@ Initializes the library. Queries all elements in the DOM with a `data-ova` attri
 Must be called once the DOM is fully loaded.
 
 ```js
-import { initOVA } from "./ova.bundle.esm.js";
+import { initOVA } from "on-view-animations/dist/ova.bundle.esm.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initOVA();
 });
 ```
+
+:::tip Direct Download
+If you installed via direct download, replace the import path with `'./path/to/ova.bundle.esm.js'`.
+:::
 
 :::warning
 Calling `initOVA()` before the DOM is ready will result in no elements being observed. Always call it inside `DOMContentLoaded` or the equivalent lifecycle hook of your framework.
@@ -36,7 +40,10 @@ Calling `initOVA()` before the DOM is ready will result in no elements being obs
 An object containing the default animation settings applied to all elements. Override its properties before calling `initOVA()` to change the defaults globally.
 
 ```js
-import { initOVA, OVA_DEFAULT_SETTINGS } from "./ova.bundle.esm.js";
+import {
+  initOVA,
+  OVA_DEFAULT_SETTINGS,
+} from "on-view-animations/dist/ova.bundle.esm.js";
 
 OVA_DEFAULT_SETTINGS.animation = "fade-bottom";
 OVA_DEFAULT_SETTINGS.duration = "600ms";
@@ -64,7 +71,10 @@ initOVA();
 An object containing the configuration for the `IntersectionObserver`. Override its properties before calling `initOVA()` to change when animations are triggered.
 
 ```js
-import { initOVA, OVA_OBSERVER_OPTIONS } from "./ova.bundle.esm.js";
+import {
+  initOVA,
+  OVA_OBSERVER_OPTIONS,
+} from "on-view-animations/dist/ova.bundle.esm.js";
 
 OVA_OBSERVER_OPTIONS.rootMargin = "0px 0px -100px 0px";
 OVA_OBSERVER_OPTIONS.threshold = 0.2;
