@@ -189,3 +189,12 @@ If you need more control over when OVA initializes — for example, after dynami
 
   </TabItem>
 </Tabs>
+
+:::tip
+Make sure to call `initOVA()` only after the DOM is fully loaded. If your script is in the `<head>`, wrap the call in a `DOMContentLoaded` listener:
+
+```js
+document.addEventListener("DOMContentLoaded", () => window.initOVA());
+```
+
+:::
